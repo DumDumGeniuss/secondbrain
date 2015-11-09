@@ -1,22 +1,48 @@
 <html>
 	<head>
 	</head>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			<!--Jump button!!-->
+            $("button").click(function(){
+				$(this).transition('set looping').transition('bounce', '200ms');
+			});
+        });
+		
+	</script>
 	<body>
-		<div class="ui center aligned segment">
-			<a class="ui massive red circular label">Welcome </a>
-			<a class="ui massive purple  circular label">To </a>
-			<a class="ui massive yellow  circular label">Cloud </a>
-			<a class="ui massive green  circular label">Secretary </a>
-			<a class="ui massive blue  circular label">!</a>
+		<div id="jump_button" class="ui center aligned basic segment">
+			<svg class="" width="0px" height="400px"></svg>
+			<button class="ui massive red circular button">Welcome</button>
+			<button class="ui massive purple circular button">To</button>
+			<button class="ui massive yellow circular button">Cloud</button>
+			<button class="ui massive green circular button">Secretary</button>
+			<button class="ui massive blue circular button">!</button>
 		</div>
 		<div class="ui horizontal divider">
-			Or
+			Enjoy Your Life , And Manage Your Life By Cloud Secretary!
 		</div>
-		<div class="ui center aligned segment">
+		<div class="ui center aligned basic segment">
 			<div class="ui teal labeled icon button">
 				Sign In Now !
 				<%=semantic_icon('add')%>
 			</div>
+		</div>
+		<div class="ui center aligned basic segment">
+			Share
+			<%=semantic_icon('long arrow right')%>
+			<button class="ui circular facebook icon button">
+				<%=semantic_icon('facebook icon')%>
+			</button>
+			<button class="ui circular twitter icon button">
+				<%=semantic_icon('twitter icon')%>
+			</button>
+			<button class="ui circular google plus icon button">
+				<%=semantic_icon('google plus icon')%>
+			</button>
+			<button class="ui circular youtube icon button">
+				<%=semantic_icon('youtube icon')%>
+			</button>
 		</div>
 	</body>
 </html>
