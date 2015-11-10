@@ -1,0 +1,2 @@
+class MemberAssociationController < ApplicationController
+end

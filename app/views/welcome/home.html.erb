@@ -25,22 +25,26 @@
 					<button class="ui massive yellow circular button">Cloud</button>
 					<button class="ui massive green circular button">Secretary</button>
 					<button class="ui massive blue circular button">!</button>
-					<svg height="400px" width="0px">
 					</svg>
 				</div>	
 			</div>
 			<div class="left floated column">
-				<svg height="400px" width="0px">
-				</svg>
 			</div>
 			<div class="ui horizontal divider">
 				<div style="color: #FFFFFF;">
 					Enjoy Your Life , And Manage Your Life By Cloud Secretary!
 				</div>
 			</div>
-			<div class="ui teal labeled icon button">
-				Sign Up Now !
+			<div id="sign_up_button" class="ui teal labeled icon button">
+				Sign Up !
 				<%=semantic_icon('add')%>
+				<form id="go_sign_up" action=<%=welcome_sign_up_path%>>
+				</form>
+				<script>
+					$('#sign_up_button').click(function(){
+						$('#go_sign_up').submit();
+					});
+				</script>
 			</div>
 		</div>
 		<div class="ui center aligned basic segment">
