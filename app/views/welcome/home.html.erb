@@ -35,14 +35,13 @@
 					Enjoy Your Life , And Manage Your Life By Cloud Secretary!
 				</div>
 			</div>
-			<div id="sign_up_button" class="ui teal labeled icon button">
-				Sign Up !
-				<%=semantic_icon('add')%>
-				<form id="go_sign_up" action=<%=welcome_sign_up_path%>>
+			<div id="go_home_button" class="ui teal button">
+				Start !
+				<form id="go_home" action="<%=home_start_path%>">
 				</form>
 				<script>
-					$('#sign_up_button').click(function(){
-						$('#go_sign_up').submit();
+					$('#go_home_button').click(function(){
+						$('#go_home').submit();
 					});
 				</script>
 			</div>
