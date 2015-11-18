@@ -9,15 +9,15 @@
 <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="ui inverted inverted sticky teal menu fixed top" style="height:60px">
-        <div class="item">
-            <%= image_tag("icon/web_logo.png") %>
-        </div>
-        <a class="item">
-            Home
+    <div class="ui inverted inverted sticky teal menu fixed top">
+        <a class="item" href="<%=root_path%>">
+            <%= image_tag("icon/web_logo.png",:style=>"width:90px;heigth:90px;") %>
         </a>
         <a class="item">
-            Messages
+            Tag
+        </a>
+        <a class="item">
+            Diary 
         </a>
         <a class="item">
             Friends
