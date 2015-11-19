@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resource :welcomes
+  resource :introduces
   devise_for :users
-  root :to => 'welcome#home'
-  get 'home/start', :to=>'home#start'
+  root :to => 'welcomes#show'
     
 # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,15 +1,6 @@
 <html>
 	<head>
 	</head>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			<!--Jump button!!-->
-            $("button").click(function(){
-				$(this).transition('set looping').transition('bounce', '200ms');
-			});
-        });
-		
-	</script>
 	<body style="background-color: #222222;">
 		<div id="jump_button" class="ui center aligned grid">
 			<div class="left floated column">
@@ -37,7 +28,7 @@
 			</div>
 			<div id="go_home_button" class="ui teal button">
 				Start !
-				<form id="go_home" action="<%=home_start_path%>">
+				<form id="go_home" action="<%=introduces_path%>">
 				</form>
 				<script>
 					$('#go_home_button').click(function(){
