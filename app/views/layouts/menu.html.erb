@@ -11,7 +11,7 @@
     <p class="alert"><%= alert %></p>
     <div class="ui inverted inverted sticky teal menu fixed top">
         <a class="item" href="<%=root_path%>">
-            <%= image_tag("icon/web_logo.png",:style=>"width:90px;heigth:90px;") %>
+            <%= image_tag("icon/web_logo.png",:style=>"width:90px;height:90px;") %>
         </a>
         <a class="item">
             Tag
@@ -22,9 +22,11 @@
         <a class="item">
             Friends
         </a>
+        <a class="item">
+        	<%= link_to("BookMark", introduces_bookmarks_path) %>
+        </a>
     </div>
     <%= yield %>
 
 </body>
 </html>
-
