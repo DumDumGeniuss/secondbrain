@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resource :welcomes
-  resource :introduces do
-  	resources :bookmarks
-  end
+  resource :introduces
+  resources :bookmarks 
   devise_for :users
   root :to => 'welcomes#show'
     
