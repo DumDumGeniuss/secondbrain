@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  resource :welcomes
-  resource :introduces
   resources :bookmarks 
   devise_for :users
-  root :to => 'welcomes#show'
-    
+  root :to => 'welcomes#index'
+  get '/introduces/member', to: 'introduces#member'  
+  
 # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

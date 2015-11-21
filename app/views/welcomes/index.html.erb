@@ -1,41 +1,31 @@
 <html>
 	<head>
 	</head>
-	<body style="background-color: #222222;">
+	<body id="welcomes_index">
 		<div id="jump_button" class="ui center aligned grid">
 			<div class="left floated column">
-				<svg height="400px" width="0px">
+				<svg height="200px" width="0px">
 				</svg>
 			</div>
 			<div class="fourteen wide column">
 				<div class="ui center aligned cloumn">
-					<svg height="400px" width="0px">
+					<svg height="200px" width="0px">
 					</svg>
 					<button class="ui massive red circular button">Welcome</button>
 					<button class="ui massive purple circular button">To</button>
-					<button class="ui massive yellow circular button">Cloud</button>
-					<button class="ui massive green circular button">Secretary</button>
-					<button class="ui massive blue circular button">!</button>
-					</svg>
+					<button class="ui massive yellow circular button">Second</button>
+					<button class="ui massive green circular button">Brain</button>
+					<button class="ui massive teal circular button">!</button>
 				</div>	
 			</div>
 			<div class="left floated column">
 			</div>
-			<div class="ui horizontal divider">
-				<div style="color: #FFFFFF;">
-					Enjoy Your Life , And Manage Your Life By Cloud Secretary!
-				</div>
+			<div id="divider_comment" class="ui horizontal divider">
+		            Have you ever dreamed of being Albert Einstein ? Second Brain makes it real !
 			</div>
-			<div id="go_home_button" class="ui teal button">
-				Start !
-				<form id="go_home" action="<%=introduces_path%>">
-				</form>
-				<script>
-					$('#go_home_button').click(function(){
-						$('#go_home').submit();
-					});
-				</script>
-			</div>
+			<a id="home_button" href="<%=introduces_member_path%>" class="ui blue massive button">
+                            Start!
+                        </a>
 		</div>
 		<div class="ui center aligned basic segment">
 			<button class="ui circular facebook icon button">

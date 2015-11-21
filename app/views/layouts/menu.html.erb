@@ -6,25 +6,49 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="layout_menu">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="ui inverted inverted sticky teal menu fixed top">
-        <a class="item" href="<%=root_path%>">
-            <%= image_tag("icon/web_logo.png",:style=>"width:90px;height:90px;") %>
-        </a>
-        <a class="item">
-            Tag
-        </a>
-        <a class="item">
-            Diary 
-        </a>
-        <a class="item">
-            Friends
-        </a>
-        <%= link_to("BookMark", bookmarks_path,:class=>"item") %>
+    
+    <div class="ui inverted sticky black menu fixed top">
+        <div class="ui container">
+            <a class="item" href="<%=root_path%>">
+                <%= image_tag("icon/web_logo.png",:id=>"web_logo_img") %>
+            </a>
+            <div class="ui simple dropdown item">
+                Introduce
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="<%=introduces_member_path%>" class="item">Team Member</a>
+                    <a class="item">History</a>
+                    <a class="item">Contact Us</a>
+                </div>
+            </div>
+            <%= link_to("BookMark", bookmarks_path,:class=>"item") %>
+            <div class="right item">
+                <div class="center aligned column">
+            <% if current_user%>
+                <a href="<%=destroy_user_session_path%>" data-method="delete" class="ui red button">
+                    <i class="sign out icon"></i>
+                    Sign Out
+                </a>
+            <% else %>
+                <a href="<%= new_registration_path(:user)%>" class="ui red button">
+                    <i class="signup icon"></i>
+                    Sign Up
+                </a>
+                <a href="<%=new_session_path(:user)%>" class="ui red button">
+                    <i class="sign in icon"></i>
+                    Sign In
+                </a>
+            <% end %>
+                </div>
+            </div>
+        </div> 
     </div>
+    <div id="main_content" class="ui container">
     <%= yield %>
+    </div>
 
 </body>
 </html>
