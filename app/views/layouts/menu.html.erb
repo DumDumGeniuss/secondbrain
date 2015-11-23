@@ -25,6 +25,15 @@
                 </div>
             </div>
             <%= link_to("BookMark", bookmarks_path,:class=>"item") %>
+            <div class="ui simple dropdown item">
+                CostManager
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="<%=cost_managers_path%>" class="item">Your Money!</a>
+                    <a class="item">My Costs</a>
+                    <a class="item">Create Costs</a>
+                </div>
+            </div>
             <div class="right item">
                 <div class="center aligned column">
             <% if current_user%>
