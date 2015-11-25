@@ -1,0 +1,51 @@
+// Place all the styles related to the bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "semantic-ui";
+
+div #bookmarks_index {
+//	padding-top: 20px;
+	background-color: #D6F0ED;
+
+	
+	h1 {
+		font-size: 60px;
+		color: #4c66e7;
+//		text-shadow: 2px 2px #f448e4;
+		font-family: sans-serif;
+		
+		span {
+			font-size: 80px;
+			color: #3F39F2;
+			text-shadow: 2px 2px #322DC5;
+		}
+	}
+	
+	.ui.doubling.stackable.grid.container {
+//		background-image: url("bookmarks/newspaper.jpg");
+	}	
+	
+	#bulletin {
+		background-color: rgba(255, 255, 255, 0.6);
+		border-radius: 10px;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.ui.huge.center.aligned.header span {
+		font-size: 90px;
+		color: #A50AC9;
+	}
+	
+	.item span {
+		font-size: 30px;
+		font-weight: bold;
+		font-family: Arial, sans-serif;
+	}
+	
+	.item {
+		padding-top: 30px;
+	}
+	
+	
+}
