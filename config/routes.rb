@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :bookmarks 
+  resources :cost_managers
   devise_for :users
   root :to => 'welcomes#index'
   get '/introduces/member', to: 'introduces#member'  
