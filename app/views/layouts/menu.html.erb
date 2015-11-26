@@ -24,7 +24,6 @@
           <a class="item">Contact Us</a>
         </div>
       </div>
-      <%= link_to("BookMark", bookmarks_path,:class=>"item") %>
       <div class="ui simple dropdown item">
         CostManager
         <i class="dropdown icon"></i>
@@ -36,43 +35,18 @@
           <% end %>
         </div>
       </div>
+      <div class="ui simple dropdown item">
+        BookMark
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="<%= bookmarks_path %>">Index Page</a>
+          <a class="item" href="<%= overview_bookmarks_path %>">Overview</a>
+          <a class="item" href="#">My BookMark</a>
+          <a class="item" href="<%= new_bookmark_path %>">Add BookMark</a>
+        </div>
+      </div>
       <div class="right item">
         <div class="center aligned column">
-          <% if current_user%>
-            <a href="<%=destroy_user_session_path%>" data-method="delete" class="ui red button">
-              <i class="sign out icon"></i>
-                Sign Out
-            </a>
-            <div class="ui simple dropdown item">
-                Introduce
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <a href="<%=introduces_member_path%>" class="item">Team Member</a>
-                    <a class="item">History</a>
-                    <a class="item">Contact Us</a>
-                </div>
-            </div>
-            <div class="ui simple dropdown item">
-            	BookMark
-            	<i class="dropdown icon"></i>
-            		<div class="menu">
-            			<a class="item" href="<%= bookmarks_path %>">Index Page</a>
-            			<a class="item" href="<%= overview_bookmarks_path %>">Overview</a>
-            			<a class="item" href="#">My BookMark</a>
-            			<a class="item" href="<%= new_bookmark_path %>">Add BookMark</a>
-      					</div>
-      			</div>
-            <div class="ui simple dropdown item">
-                CostManager
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <a href="<%=cost_managers_path%>" class="item">Your Money!</a>
-                    <a class="item">My Costs</a>
-                    <a class="item">Create Costs</a>
-                </div>
-            </div>
-            <div class="right item">
-                <div class="center aligned column">
             <% if current_user%>
                 <a href="<%=destroy_user_session_path%>" data-method="delete" class="ui red button">
                     <i class="sign out icon"></i>
@@ -88,13 +62,12 @@
                     Sign In
                 </a>
             <% end %>
-                </div>
-            </div>
         </div> 
+      </div>
     </div>
+  </div>
     <div id="main_content" class="ui container">
     <%= yield %>
     </div>
-  </div>
 </body>
 </html>
