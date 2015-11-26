@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120023355) do
+ActiveRecord::Schema.define(version: 20151125143530) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string   "website"
@@ -20,6 +20,20 @@ ActiveRecord::Schema.define(version: 20151120023355) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "costs", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "user_id"
+    t.string   "cost_for"
+    t.string   "position"
+    t.date     "cost_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "amount"
+  end
+
+  add_index "costs", ["type"], name: "index_costs_on_type"
+  add_index "costs", ["user_id"], name: "index_costs_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
