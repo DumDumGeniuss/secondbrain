@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :bookmarks 
+  resources :bookmarks do
+  	collection do
+  		get 'overview'
+  	end
+  end
   resources :cost_managers
   devise_for :users
   root :to => 'welcomes#index'

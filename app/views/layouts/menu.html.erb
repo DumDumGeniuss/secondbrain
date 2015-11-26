@@ -24,7 +24,16 @@
                     <a class="item">Contact Us</a>
                 </div>
             </div>
-            <%= link_to("BookMark", bookmarks_path,:class=>"item") %>
+            <div class="ui simple dropdown item">
+            	BookMark
+            	<i class="dropdown icon"></i>
+            		<div class="menu">
+            			<a class="item" href="<%= bookmarks_path %>">Index Page</a>
+            			<a class="item" href="<%= overview_bookmarks_path %>">Overview</a>
+            			<a class="item" href="#">My BookMark</a>
+            			<a class="item" href="<%= new_bookmark_path %>">Add BookMark</a>
+      					</div>
+      			</div>
             <div class="ui simple dropdown item">
                 CostManager
                 <i class="dropdown icon"></i>
