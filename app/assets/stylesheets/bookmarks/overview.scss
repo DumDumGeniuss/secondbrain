@@ -1,0 +1,22 @@
+// Place all the styles related to the bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "semantic-ui";
+
+div #bookmarks_overview {
+	background-color: white;
+	
+	.huge.header {
+		padding-top: 20px;
+	}
+	
+	.stackable.grid .thirteen.wide.column {
+		padding-left: 40px;
+		padding-top: 0px;
+	}
+
+
+}
+
+
