@@ -3,29 +3,13 @@
 	</head>
 	<body id="welcomes_index">
 		<div id="jump_button" class="ui center aligned grid">
-			<div class="left floated column">
-				<svg height="200px" width="0px">
-				</svg>
-			</div>
-			<div class="fourteen wide column">
-				<div class="ui center aligned cloumn">
-					<svg height="200px" width="0px">
-					</svg>
-					<button class="ui massive red circular button">Welcome</button>
-					<button class="ui massive purple circular button">To</button>
-					<button class="ui massive yellow circular button">Second</button>
-					<button class="ui massive green circular button">Brain</button>
-					<button class="ui massive teal circular button">!</button>
-				</div>	
-			</div>
-			<div class="left floated column">
-			</div>
-			<div id="divider_comment" class="ui horizontal divider">
-		            Have you ever dreamed of being Albert Einstein ? Second Brain makes it real !
-			</div>
-			<a id="home_button" href="<%= cost_managers_path%>" class="ui blue massive button" >
-                            Start!
-                        </a>
+                  <%= image_tag("icon/second_brain_logo.gif",:style=>"",:class=>"ui centered image") %>
+		  <div id="divider_comment" class="ui horizontal divider">
+                    Have you ever dreamed of being Albert Einstein ? Second Brain makes it real !
+		  </div>
+		  <a id="home_button" href="<%= cost_managers_path%>" class="ui blue massive button" >
+                    Start!
+                  </a>
 		</div>
 		<div class="ui center aligned basic segment">
 			<button class="ui circular facebook icon button">

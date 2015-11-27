@@ -1,2 +1,37 @@
 <div id='cost_managers_show'>
+  <div class='ui center aligned grid'>
+    <div class='ui eight wide column'>
+      <a href='<%=new_cost_manager_path+'?cost_type='+@cost_type%>' class='ui green button'>
+        Create New Cost!
+      </a>
+      <table class='ui inverted blue table'>
+        <thead>
+          <tr>
+            <th>Cost Type</th>
+            <th>Cost For</th>
+            <th>Amount</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @costs.each do |cost|%>
+          <tr>
+            <td>
+              <%=cost.cost_type%>
+            </td>
+            <td>
+              <%=cost.cost_for%>
+            </td>
+            <td>
+              <%=cost.amount%>
+            </td>
+            <td>
+              <%=cost.position%>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
