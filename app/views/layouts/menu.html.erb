@@ -12,38 +12,31 @@
     
   <div class="ui inverted sticky teal menu fixed top">
     <div class="ui container">
-      <a class="item" href="<%=root_path%>">
-        <%= image_tag("icon/second_brain_logo.gif",:id=>"web_logo_img") %>
+      <a href="<%=root_path%>" class='menu_item ui item'>
+        <h2 class="ui center aligned icon header">
+          <%= image_tag("icon/second_brain_logo.gif",:id=>"second_brain_img",:class=>'menu_image ui icon') %>
+          HomePage
+        </h2>
       </a>
-      <div class="ui simple dropdown item">
-        Introduce
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a href="<%=introduces_member_path%>" class="item">Team Member</a>
-          <a class="item">History</a>
-          <a class="item">Contact Us</a>
-        </div>
-      </div>
-      <div class="ui simple dropdown item">
-        CostManager
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a href="<%=cost_managers_path%>" class="item">Your Cost Manager!</a>
-          <% if current_user%>
-            <a href="<%=cost_menu_cost_managers_path%>" class="item">My Costs</a>
-          <% end %>
-        </div>
-      </div>
-      <div class="ui simple dropdown item">
-        BookMark
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="<%= bookmarks_path %>">Index Page</a>
-          <a class="item" href="<%= overview_bookmarks_path %>">Overview</a>
-          <a class="item" href="#">My BookMark</a>
-          <a class="item" href="<%= new_bookmark_path %>">Add BookMark</a>
-        </div>
-      </div>
+      <a href='<%= introduces_member_path %>' id='introduces_menu' class="menu_item ui item">
+        <h2 class="ui center aligned icon header">
+          <%= image_tag("icon/introduce_logo.gif",:id=>"introduce_logo_img",:class=>'menu_image ui icon') %>
+          Introduce
+        </h2>
+      </a>
+      <a href='<%= cost_managers_path %>' id='cost_managers_menu' class="menu_item ui item">
+        <h2 class="ui center aligned icon header">
+          <%= image_tag("icon/web_logo.png",:id=>"web_logo_img",:class=>'menu_image ui icon') %>
+          CostManager
+        </h2>
+      </a>
+      <a href='<%= bookmarks_path %>' id='bookmarks_menu' class="menu_item ui item">
+        <h2 class="ui center aligned icon header">
+          <%= image_tag("icon/bookmark_logo.gif",:id=>"bookmark_logo_img",:class=>'menu_image ui icon') %>
+          Bookmark
+        </h2>
+      </a>
+
       <div class="right item">
         <div class="center aligned column">
             <% if current_user%>
