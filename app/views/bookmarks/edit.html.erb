@@ -8,6 +8,7 @@
 		</div>
 	</div>
 	<!-- Main Content -->
+	<%= form_for @bookmark, html: {class: "ui form"}  do |f| %>
 	<div class="ui stackable grid">
 		<div class="one wide column"></div>
 		<div class="twelve wide column">
@@ -17,11 +18,12 @@
 					<label>Website Link</label>
 				</div>
 				<div class="sixteen wide field">
-					<input name="website" placeholder="  Link here" type="text">
+					<%= f.text_field :website, placeholder: 'Paste Your Link Here' %>
 				</div>
 				<div class="two fields">
 					<div class="four wide field">
 						<label>Category</label>
+						<%= f.select(:category, options_for_select([['Restaurant'], ['Travel Attraction'], ['Hotel/B&B'], ['News'], ['Technology'], ['Recipe'], ['Sport'], ['Job'], ['Others']])) %>
 						<select class="ui dropdown">
 							<option value="restaurant">Restaurant</option>
 							<option value="travel">Travel Attraction</option>
@@ -35,7 +37,7 @@
 						</select>
 					</div>
 					<div class="ten wide field">
-						<button class="ui right floated large basic button" type="submit"><strong>Update</strong></button>
+						<%= f.submit "Submit", class: "ui right floated large basic button" %>
 					</div>
 				</div>
 			</form>
@@ -43,5 +45,6 @@
 		<div class="three wide column">
 		</div>
 	</div>
+	<% end %>
 </div>
 		

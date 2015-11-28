@@ -1,12 +1,15 @@
 body#layout_menu{
   background-color:#75DDFF;
-  #web_logo_img{
-    width:55px;
-    height:55px;
-  }
   #main_content{
-    padding-top:70px;
+    padding-top:130px;
     background-color: #D6F0ED;
     //background-color:rgba(33,119,208,0.36);
   }
+  .menu_image{
+    width:60px;
+    height:60px;
+  }
+  .menu_item>h2{
+    font-family: Comic Sans MS;
+  } 
 }

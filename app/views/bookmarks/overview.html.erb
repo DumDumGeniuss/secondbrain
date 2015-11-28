@@ -5,9 +5,10 @@
 	<div class="ui stackable grid">
 		<div class="fourteen wide centered column">
 			<div class="ui huge header">BookMark OverView</div>
-		</div>		
+			<%= link_to("Add Bookmark", new_bookmark_path, class: "ui basic button") %>
+		</div>
 	</div>
-	<!-- Main Content -->
+	<!-- Main Content -->	
 	<div class="ui stackable grid">
 		<div class="thirteen wide column">
 			<div class="ui top attached stackable tabular menu">
@@ -23,29 +24,237 @@
 				<a class="item" data-tab="other">Others</a>
 			</div>
 			<div class="ui active bottom attached tab segment" data-tab="all">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<tr>
+							<td class="collapsing">
+								<i class="pointing right icon"></i>
+								<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+								<% if bookmark.editable_by?(current_user) %>
+									<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+									<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+								<% end %>
+							</td>
+						</tr>
+					<% end %>
+					</tbody>
+				</table>	
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="restaurant">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Restaurant" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>		
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="travel">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Travel Attraction" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="hotel">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Hotel/B&B" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="news">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "News" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="tech">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Technology" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="recipe">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Recipe" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="sport">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Sport" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="job">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Job" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="other">
+				<table class="ui celled striped table">
+					<thead>
+						<tr><th><h3 class="ui blue header"><em>Website Title</em></h3></th></tr>
+					</thead>
+					<tbody>
+					<% @bookmark.each do |bookmark| %>
+						<% if bookmark.category == "Others" %>
+							<tr>
+								<td class="collapsing">
+									<i class="pointing right icon"></i>
+									<%= link_to(bookmark.title, bookmark.website, target: "_blank") %>
+									<% if bookmark.editable_by?(current_user) %>
+										<%= link_to("Delete", bookmark_path(bookmark), method: :delete, class: "ui basic right floated tiny button") %>
+										<%= link_to("Edit", edit_bookmark_path(bookmark), class: "ui basic right floated tiny button") %>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% end %>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<div class="three wide column">
 			<div class="ui big header">Popular ones</div>
 			<div class="ui big header">RSS Links</div>
 		</div>
-	</div> 
+	</div>
 </div>
