@@ -22,9 +22,13 @@ class BookmarksController < ApplicationController
 	
 	def create
 		@bookmark = Bookmark.new(bookmark_params)
+		require 'pismo'
 		
 		if @bookmark.save
-			redirect_to bookmark_path(@bookmark)
+			doc = Pismo::Document.new(:website)
+			@bookmark.title = doc.title
+			@bookmark.save
+			redirect_to overview_bookmarks_path
 		else
 			render :new
 		end
