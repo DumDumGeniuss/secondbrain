@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cloudsecretary</title>
+  <title>SecondBrain</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,10 +10,10 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     
-  <div class="ui inverted sticky black menu fixed top">
+  <div class="ui inverted sticky teal menu fixed top">
     <div class="ui container">
       <a class="item" href="<%=root_path%>">
-        <%= image_tag("icon/web_logo.png",:id=>"web_logo_img") %>
+        <%= image_tag("icon/second_brain_logo.gif",:id=>"web_logo_img") %>
       </a>
       <div class="ui simple dropdown item">
         Introduce
@@ -28,10 +28,9 @@
         CostManager
         <i class="dropdown icon"></i>
         <div class="menu">
-          <a href="<%=cost_managers_path%>" class="item">Your Money!</a>
+          <a href="<%=cost_managers_path%>" class="item">Your Cost Manager!</a>
           <% if current_user%>
             <a href="<%=cost_menu_cost_managers_path%>" class="item">My Costs</a>
-            <a class="item">Create Costs</a>
           <% end %>
         </div>
       </div>

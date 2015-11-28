@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125143530) do
+ActiveRecord::Schema.define(version: 20151126155331) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string   "website"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20151125143530) do
   end
 
   create_table "costs", force: :cascade do |t|
-    t.string   "type"
+    t.string   "cost_type"
     t.integer  "user_id"
     t.string   "cost_for"
     t.string   "position"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20151125143530) do
     t.integer  "amount"
   end
 
-  add_index "costs", ["type"], name: "index_costs_on_type"
+  add_index "costs", ["cost_type"], name: "index_costs_on_cost_type"
   add_index "costs", ["user_id"], name: "index_costs_on_user_id"
 
   create_table "users", force: :cascade do |t|

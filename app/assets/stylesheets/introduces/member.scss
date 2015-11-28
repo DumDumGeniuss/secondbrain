@@ -4,5 +4,9 @@
 body#introduces_member{
   #member_intro_div{
     color:white;
+    .member_picture{
+      width:400px;
+      height:400px;
+    }
   }
 }
