@@ -24,18 +24,6 @@
 					<div class="four wide field">
 						<label>Category</label>
 						<%= f.select(:category, options_for_select([['Restaurant'], ['Travel Attraction'], ['Hotel/B&B'], ['News'], ['Technology'], ['Recipe'], ['Sport'], ['Job'], ['Others']])) %>
-<!--						<select class="ui dropdown">
-							<option value="restaurant">Restaurant</option>
-							<option value="travel">Travel Attraction</option>
-							<option value="hotel">Hotel/B&B</option>
-							<option value="news">News</option>
-							<option value="tech">Technology</option>
-							<option value="recipe">Recipe</option>
-							<option value="sport">Sport</option>
-							<option value="job">Job</option>
-							<option value="other">Others</option>
-						</select>
--->
 					</div>
 					<div class="ten wide field">
 						<%= f.submit "Submit", class: "ui right floated large basic button" %>

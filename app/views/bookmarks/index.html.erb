@@ -3,7 +3,6 @@
 <div class="ui fluid container" id="bookmarks_index">
 	<div class="ui center aligned grid"><br>
 		<h1 class="ui header">Welcome To <span>BookMark</span> !</h1><br>
-<!--		<%= image_tag("bookmarks/1.jpg", size:"470x100") %> -->
 	</div>
 	<div class="ui divider"></div>
 	
@@ -23,15 +22,19 @@
 			</div>
 			<div class="four wide center aligned column" id="bulletin_button"><br><br><br>
 				<div class="ui huge center aligned header">No Hesitation !</div>
-				<button class="ui red big basic button">
-					<i class="red large lightning icon"></i>
-					<strong>TRY Now</strong>
-				</button>	<br><br>
+				<a href="<%=choice_bookmarks_path%>">
+					<button class="ui red big basic button">
+						<i class="red lightning icon"></i>
+						<strong>TRY Now</strong>
+					</button>
+				</a>	<br><br>
 				<div class="ui small center aligned header">Already Known Well !</div>
-				<button class="ui purple small basic button">
-					<i class="purple small send icon"></i>
-					<strong>Continue</strong>
-				</button>
+				<a href="<%=choice_bookmarks_path%>">	
+					<button class="ui purple small basic button">
+						<i class="purple small send icon"></i>
+						<strong>Continue</strong>
+					</button>
+				</a>
 			</div>
 			<div class="four wide column" id="bulletin">
 				<div class="ui huge center aligned header">What We Can Do..</div>
