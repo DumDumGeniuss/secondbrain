@@ -1,15 +1,60 @@
 <div id='cost_managers_new'>
   <div class='ui center aligned grid'>
-    <div class='ui six wide left aligned column'>
+    <div class='ui twelve wide center aligned column'>
       <%= form_for @cost, url: {action: "create"}, html: {class: "ui form"} do |f| %>
-          <label class='ui teal big label'>Cost Type</label>
-          <%= f.text_field :cost_type, value:@cost_type %>
-          <label class='ui teal big label'>Cost For</label>
+          <h2 class='ui centered header'>Cost Type</h2>
+          <div class="inline fields">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'food', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/food_logo.gif")%>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'clothing', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/clothing_logo.gif") %>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'living', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/living_logo.gif") %>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'transportation', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/transportation_logo.gif") %>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'entertainment', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/entertainment_logo.gif") %>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="ui inverted divider"></div>
+          <h2 class='ui centered header'>For What</h2>
           <%= f.text_field :cost_for %>
-          <label class='ui teal big label'>Amount</label>
+          <div class="ui inverted divider"></div>
+          <h2 class='ui centered header'>Amount</h2>
           <%= f.text_field :amount %>
-          <label class='ui teal big label'>Position</label>
+          <div class="ui inverted divider"></div>
+          <h2 class='ui centered header'>Position</h2>
           <%= f.text_field :position %>
+          <div class="ui inverted divider"></div>
           <%= f.submit "Create" ,class:'ui teal button'%>
       <% end %>
     </div>
