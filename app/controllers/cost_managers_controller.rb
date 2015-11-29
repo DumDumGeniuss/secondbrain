@@ -26,13 +26,16 @@ class CostManagersController < ApplicationController
   end
 
   def destroy
+    @cost = User.find(current_user.id).costs.where(:id=>params[:id]).first
+    @cost.delete
+    redirect_to cost_manager_path(current_user.id)
   end
 
   def cost_menu
   end
 
   def cost_params
-    params.require(:cost).permit(:cost_type,:cost_for,:amount,:position)
+    params.require(:cost).permit(:cost_type,:cost_for,:price,:position)
   end
 
 end

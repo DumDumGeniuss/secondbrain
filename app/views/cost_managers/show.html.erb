@@ -1,6 +1,6 @@
 <div id='cost_managers_show'>
   <div class='ui center aligned grid'>
-    <div class='ui eight wide column'>
+    <div class='ui fourteen wide column'>
       <a href='<%=new_cost_manager_path%>' class='ui green massive button'>
         Create New Cost!
       </a>
@@ -9,24 +9,36 @@
           <tr>
             <th>Cost Type</th>
             <th>For What</th>
-            <th>Amount</th>
+            <th>Price</th>
             <th>Position</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
         <% @costs.each do |cost|%>
           <tr>
             <td>
+              <h3>
               <%= image_tag("icon/"+cost.cost_type+"_logo.gif")%>
+              </h3>
             </td>
             <td>
+              <h3>
               <%=cost.cost_for%>
+              </h3>
             </td>
             <td>
-              <%=cost.amount%>
+              <h3>
+              <%=cost.price%>
+              </h3>
             </td>
             <td>
+              <h3>
               <%=cost.position%>
+              </h3>
+            </td>
+            <td>
+              <%= link_to("Delete", cost_manager_path(cost.id), method: :delete,:class=>'ui purple button') %>
             </td>
           </tr>
         <% end %>

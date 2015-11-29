@@ -6,7 +6,7 @@
           <div class="inline fields">
             <div class="field">
               <div class="ui radio checkbox">
-                <%= f.text_field :cost_type, :value=>'food', :type=>'radio' %>
+                <%= f.text_field :cost_type, :value=>'food', :type=>'radio', :checked=>'checked' %>
                 <label>
                   <%= image_tag("icon/food_logo.gif")%>
                 </label>
@@ -44,13 +44,21 @@
                 </label>
               </div>
             </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <%= f.text_field :cost_type, :value=>'income', :type=>'radio' %>
+                <label>
+                  <%= image_tag("icon/income_logo.gif") %>
+                </label>
+              </div>
+            </div>
           </div>
           <div class="ui inverted divider"></div>
           <h2 class='ui centered header'>For What</h2>
           <%= f.text_field :cost_for %>
           <div class="ui inverted divider"></div>
-          <h2 class='ui centered header'>Amount</h2>
-          <%= f.text_field :amount %>
+          <h2 class='ui centered header'>Price</h2>
+          <%= f.text_field :price %>
           <div class="ui inverted divider"></div>
           <h2 class='ui centered header'>Position</h2>
           <%= f.text_field :position %>
