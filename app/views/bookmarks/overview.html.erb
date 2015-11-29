@@ -2,10 +2,18 @@
 
 <div class="ui stackable container" id="bookmarks_overview">
 	<!-- Header -->
-	<div class="ui stackable grid">
-		<div class="fourteen wide centered column">
+	<div class="ui four column stackable grid">
+		<div class="one wide column">
+		</div>
+		<div class="six wide column">
 			<div class="ui huge header">BookMark OverView</div>
+		</div>
+		<div class="eight wide column">
 			<%= link_to("Add Bookmark", new_bookmark_path, class: "ui basic button") %>
+			<%= link_to("My Bookmark", "#",  class: "ui basic button") %>
+			<%= link_to("Menu", choice_bookmarks_path, class: "ui basic button") %>
+		</div>
+		<div class="one wide column">
 		</div>
 	</div>
 	<!-- Main Content -->	
@@ -252,7 +260,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="three wide column">
+		<div class="three wide center aligned column">
 			<div class="ui big header">Popular ones</div>
 			<div class="ui big header">RSS Links</div>
 		</div>

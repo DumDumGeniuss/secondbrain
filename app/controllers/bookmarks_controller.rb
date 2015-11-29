@@ -8,6 +8,9 @@ class BookmarksController < ApplicationController
 	def index
 	end
 	
+	def choice
+	end
+	
 	def overview
 		@bookmark = Bookmark.all
 	end

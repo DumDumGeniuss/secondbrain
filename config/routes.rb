@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :bookmarks do
   	collection do
   		get 'overview'
+  		get 'choice'
   	end
   end
   resources :cost_managers do

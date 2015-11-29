@@ -6,9 +6,14 @@
 
 div #bookmarks_overview {
 	background-color: white;
+	padding-bottom: 150px;
 	
 	.huge.header {
 		padding-top: 20px;
+	}
+	
+	.eight.wide.column {
+		padding-top: 30px;
 	}
 	
 	.stackable.grid .thirteen.wide.column {
