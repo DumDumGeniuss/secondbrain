@@ -6,7 +6,7 @@ class CostManagersController < ApplicationController
   end
 
   def show
-    @costs=User.find(params[:id]).costs
+    @costs=User.find(current_user.id).costs
   end
 
   def new
