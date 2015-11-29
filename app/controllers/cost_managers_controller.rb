@@ -1,24 +1,22 @@
 class CostManagersController < ApplicationController
   layout "menu"
-
+  before_action :authenticate_user!, :except => [:index]
   def index
      
   end
 
   def show
-    @costs=User.find(current_user.id).costs.where(:cost_type=>params[:id])
-    @cost_type = params[:id]
+    @costs=User.find(current_user.id).costs
   end
 
   def new
     @cost = Cost.new
-    @cost_type = params[:cost_type]
   end
 
   def create
     @cost = User.find(current_user.id).costs.build(cost_params)
     @cost.save
-    redirect_to cost_manager_path( @cost.cost_type )
+    redirect_to cost_manager_path(current_user.id )
   end
 
   def edit

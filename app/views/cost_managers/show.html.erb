@@ -1,14 +1,14 @@
 <div id='cost_managers_show'>
   <div class='ui center aligned grid'>
     <div class='ui eight wide column'>
-      <a href='<%=new_cost_manager_path+'?cost_type='+@cost_type%>' class='ui green button'>
+      <a href='<%=new_cost_manager_path%>' class='ui green massive button'>
         Create New Cost!
       </a>
       <table class='ui inverted blue table'>
         <thead>
           <tr>
             <th>Cost Type</th>
-            <th>Cost For</th>
+            <th>For What</th>
             <th>Amount</th>
             <th>Position</th>
           </tr>
@@ -17,7 +17,7 @@
         <% @costs.each do |cost|%>
           <tr>
             <td>
-              <%=cost.cost_type%>
+              <%= image_tag("icon/"+cost.cost_type+"_logo.gif")%>
             </td>
             <td>
               <%=cost.cost_for%>

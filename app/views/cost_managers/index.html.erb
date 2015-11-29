@@ -1,6 +1,14 @@
 <div id="cost_manager">
-  <h1 class="ui center aligned icon header">
-    <%= image_tag("icon/web_logo.png",:style=>"",:class=>"ui image") %>
-    Your Cost Manager!
-  </h1>
+  <div class='ui center aligned grid'>
+    <div class='ui twelve wide column'>
+      <%= image_tag("icon/web_logo.png",:class=>'ui centered small image')%>      
+    </div>
+    <div class='ui horizontal divider'>
+    </div>
+    <div class='ui ten wide column'>
+      <a class='ui red massive button' href='<%=cost_manager_path(0)%>'>
+        Your Cost Manager!
+      </a>
+    </div>
+  </div>
 </div>

@@ -7,23 +7,23 @@
   <div class='ui center aligned grid'>
     <div class='ui three wide column'>
     <div class="ui list">
-      <a href="<%=cost_manager_path('food')%>" class="ui small circular image">
+      <a href="<%=cost_manager_path(current_user.id)%>" class="ui small circular image">
         <%= image_tag("icon/food_logo.gif")%>
       </a>
-      <a href="<%=cost_manager_path('clothing')%>" class="ui small circular image">
+      <a href="<%=cost_manager_path(current_user.id)%>" class="ui small circular image">
         <%= image_tag("icon/clothing_logo.gif") %>
       </a>
-      <a href="<%=cost_manager_path('living')%>" class="ui small circular image">
+      <a href="<%=cost_manager_path(current_user.id)%>" class="ui small circular image">
         <%= image_tag("icon/living_logo.gif") %>
       </a>
     </div>
     </div>
     <div class='ui three wide column'>
     <div class="ui middle aligned animated list">
-      <a href="<%=cost_manager_path('transportation')%>" class="ui small circular image">
+      <a href="<%=cost_manager_path(current_user.id)%>" class="ui small circular image">
         <%= image_tag("icon/transportation_logo.gif") %>
       </a>
-      <a href="<%=cost_manager_path('entertainment')%>" class="ui small circular image">
+      <a href="<%=cost_manager_path(current_user.id)%>" class="ui small circular image">
         <%= image_tag("icon/entertainment_logo.gif") %>
       </a>
     </div>
